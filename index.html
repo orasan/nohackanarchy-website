@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoHackAnarchy - The Ultimate Vanilla Anarchy Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="NoHackAnarchy - 究極のバニラ無政府状態サーバー。チート以外なんでもあり！">
+    <meta name="keywords" content="Minecraft, アナーキーサーバー, マルチプレイ, バニラ, 無政府状態">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">NoHackAnarchy</a>
+            <ul class="nav-menu">
+                <li><a href="#" class="active" data-tab="home">ホーム</a></li>
+                <li><a href="#" data-tab="blog">アップデート</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content (Home Page) -->
+    <div class="container" id="home-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-title-container">
+                <img src="hero-logo.png" alt="NoHackAnarchy" class="hero-title-logo">
+            </div>
+            <p class="hero-subtitle">究極のバニラ無政府状態サーバー - チート以外なんでもあり</p>
+            <a href="#" class="hero-cta">
+                <span>🎮</span>
+                今すぐ参加
+            </a>
+        </section>
+
+        <!-- Main Content -->
+        <div class="content-grid">
+            <div class="main-content">
+                <!-- Server Info Card -->
+                <div class="card server-info-card">
+                    <div class="card-header">
+                        <div class="card-icon">🖥️</div>
+                        <h2 class="card-title">サーバー情報</h2>
+                    </div>
+                    
+                    <div class="connection-info">
+                        <h4>接続情報</h4>
+                        <div class="connection-detail">
+                            <span>IP:</span>
+                            <span>nohackanarchy.mcsv.win</span>
+                        </div>
+                        <div class="connection-detail">
+                            <span>ポート:</span>
+                            <span>3021</span>
+                        </div>
+                        <div class="connection-detail">
+                            <span>対応版:</span>
+                            <span>Java・統合版共通</span>
+                        </div>
+                        <div class="connection-detail">
+                            <span>バージョン:</span>
+                            <span>Java 1.21.5+</span>
+                        </div>
+                    </div>
+
+                    <h4>🎮 クロスプラットフォーム対応</h4>
+                    <p>Nintendo Switch、Xbox、PS4/5からの参加も可能！<br>
+                    <strong>minianarchy1</strong> をフレンド追加してから参加してください。</p>
+                    
+                    <div style="background: rgba(243, 156, 18, 0.1); border-radius: 8px; padding: 1rem; margin-top: 1rem; border-left: 3px solid var(--accent-orange);">
+                        <strong>💡 接続のヒント:</strong><br>
+                        参加ボタンが表示されない場合は、ゲームを再起動するか30秒〜60秒お待ちください。
+                    </div>
+                </div>
+
+                <!-- Rules Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">⚖️</div>
+                        <h2 class="card-title">サーバールール</h2>
+                    </div>
+                    
+                    <h3 style="color: var(--accent-red); margin-bottom: 1rem;">🚫 禁止事項（BAN対象）</h3>
+                    <ul class="rules-list">
+                        <li><span class="icon">❌</span> ハッキング</li>
+                        <li><span class="icon">❌</span> チートとハッククライアントの使用</li>
+                        <li><span class="icon">❌</span> サーバークラッシャー</li>
+                        <li><span class="icon">❌</span> X-rayの使用</li>
+                    </ul>
+
+                    <div class="allowed-note">
+                        <strong>⚡ 要約: チート以外なんでもあり！</strong><br>
+                        荒らし行為は通常通り許可されています。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Discord -->
+                <div class="card discord-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💬</div>
+                    <h3>コミュニティ</h3>
+                    <p>詳細情報、アップデート、コミュニティとの交流はDiscordで！</p>
+                    <a href="https://discord.gg/CzfGwv2wPM" class="discord-btn" target="_blank">
+                        Discord参加
+                    </a>
+                </div>
+
+                <!-- Server Info -->
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">🎮 サーバー特徴</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+                        <div>
+                            <div style="font-size: 1.5rem; color: var(--accent-orange); font-weight: bold;">24/7</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">稼働時間</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.5rem; color: var(--accent-orange); font-weight: bold;">∞</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">自由度</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Section (Hidden by default) -->
+    <section class="blog-section" id="blog-content" style="display: none;">
+        <div class="container">
+            <div class="blog-header">
+                <h2>最新アップデート</h2>
+                <p>サーバーの最新情報とアップデート履歴をご確認いただけます</p>
+            </div>
+
+            <!-- Blog Controls -->
+            <div class="blog-controls">
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">すべて</button>
+                    <button class="filter-btn" data-filter="announcement">📢 発表</button>
+                    <button class="filter-btn" data-filter="important">⚠️ 重要</button>
+                    <button class="filter-btn" data-filter="update">🔄 アップデート</button>
+                    <button class="filter-btn" data-filter="maintenance">🔧 メンテナンス</button>
+                </div>
+                <div class="blog-search">
+                    <input type="text" id="blog-search" placeholder="記事を検索...">
+                    <button id="search-btn">🔍</button>
+                </div>
+            </div>
+
+            <!-- Blog Container -->
+            <div class="blog-container" id="blog-posts">
+                <!-- Blog posts will be loaded here dynamically -->
+            </div>
+            
+            <!-- Blog Navigation -->
+            <div class="blog-navigation" id="blog-pagination">
+                <!-- Pagination will be generated here -->
+            </div>
+
+            <!-- Blog Management (Admin Panel) -->
+            <div class="admin-panel" id="admin-panel" style="display: none;">
+                <h3>記事管理</h3>
+                
+                <!-- Data Warning -->
+                <div class="admin-warning">
+                    ⚠️ <strong>重要:</strong> この環境では変更はリロード後に失われます。<br>
+                    実際の運用にはバックエンド（PHP/Node.js等）が必要です。
+                </div>
+
+                <!-- Admin Controls -->
+                <div class="admin-controls">
+                    <button id="add-post-btn" class="admin-btn">新しい記事を追加</button>
+                    <button id="export-btn" class="admin-btn secondary">データをエクスポート</button>
+                    <button id="import-btn" class="admin-btn secondary">データをインポート</button>
+                </div>
+                
+                <!-- Import Area -->
+                <div class="import-area" id="import-area" style="display: none;">
+                    <h4>JSONデータをインポート</h4>
+                    <textarea id="import-data" placeholder="blog-data.jsonの内容をここに貼り付けてください" rows="8"></textarea>
+                    <div class="form-actions">
+                        <button id="import-confirm" class="admin-btn">インポート実行</button>
+                        <button id="import-cancel" class="admin-btn secondary">キャンセル</button>
+                    </div>
+                </div>
+                
+                <!-- Add/Edit Post Form -->
+                <div class="post-form" id="post-form" style="display: none;">
+                    <h4 id="form-title">新しい記事を追加</h4>
+                    <form id="blog-form">
+                        <input type="hidden" id="post-id">
+                        
+                        <!-- Title -->
+                        <div class="form-group">
+                            <label for="post-title">タイトル:</label>
+                            <input type="text" id="post-title" required placeholder="記事のタイトルを入力">
+                        </div>
+
+                        <!-- Editor Mode Toggle -->
+                        <div class="form-group">
+                            <label>編集モード:</label>
+                            <div class="editor-toggle">
+                                <button type="button" id="editor-visual" class="editor-btn active">ビジュアル</button>
+                                <button type="button" id="editor-markdown" class="editor-btn">マークダウン</button>
+                                <button type="button" id="editor-preview" class="editor-btn">プレビュー</button>
+                            </div>
+                        </div>
+
+                        <!-- Visual Editor -->
+                        <div class="form-group" id="visual-editor" style="display: block;">
+                            <label>本文 (ビジュアルエディタ):</label>
+                            <div class="editor-toolbar">
+                                <button type="button" data-command="bold" title="太字"><b>B</b></button>
+                                <button type="button" data-command="italic" title="斜体"><i>I</i></button>
+                                <button type="button" data-command="underline" title="下線"><u>U</u></button>
+                                <span class="separator">|</span>
+                                <button type="button" data-command="insertUnorderedList" title="箇条書き">• List</button>
+                                <button type="button" data-command="insertOrderedList" title="番号付きリスト">1. List</button>
+                                <span class="separator">|</span>
+                                <button type="button" id="insert-image" title="画像挿入">🖼️ 画像</button>
+                                <button type="button" id="insert-link" title="リンク挿入">🔗 リンク</button>
+                                <span class="separator">|</span>
+                                <button type="button" data-command="removeFormat" title="書式クリア">✨ クリア</button>
+                            </div>
+                            <div id="content-editor" contenteditable="true" class="rich-editor" placeholder="記事の内容を入力してください..."></div>
+                        </div>
+
+                        <!-- Markdown Editor -->
+                        <div class="form-group" id="markdown-editor" style="display: none;">
+                            <label>本文 (マークダウン):</label>
+                            <div class="markdown-toolbar">
+                                <button type="button" onclick="insertMarkdown('**', '**')" title="太字">**B**</button>
+                                <button type="button" onclick="insertMarkdown('*', '*')" title="斜体">*I*</button>
+                                <button type="button" onclick="insertMarkdown('## ', '')" title="見出し"># H</button>
+                                <button type="button" onclick="insertMarkdown('- ', '')" title="リスト">• List</button>
+                                <button type="button" onclick="insertMarkdown('[', '](url)')" title="リンク">🔗</button>
+                                <button type="button" onclick="insertMarkdown('![alt](', ')')" title="画像">🖼️</button>
+                            </div>
+                            <textarea id="markdown-content" rows="12" placeholder="マークダウン形式で記事を書いてください...
+
+## 見出し
+**太字** *斜体*
+- リスト項目
+[リンクテキスト](URL)
+![画像説明](画像URL)"></textarea>
+                        </div>
+
+                        <!-- Preview Area -->
+                        <div class="form-group" id="preview-area" style="display: none;">
+                            <label>プレビュー:</label>
+                            <div id="content-preview" class="preview-content"></div>
+                        </div>
+
+                        <!-- Image Upload -->
+                        <div class="form-group">
+                            <label>画像アップロード:</label>
+                            <div class="upload-area" id="upload-area">
+                                <input type="file" id="image-upload" accept="image/*" multiple style="display: none;">
+                                <div class="upload-zone" onclick="document.getElementById('image-upload').click()">
+                                    <div class="upload-icon">📁</div>
+                                    <div class="upload-text">クリックまたはドラッグして画像をアップロード</div>
+                                    <div class="upload-hint">JPG, PNG, GIF (最大5MB)</div>
+                                </div>
+                            </div>
+                            <div id="image-gallery" class="image-gallery"></div>
+                        </div>
+
+                        <!-- Meta Information -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="post-author">著者:</label>
+                                <input type="text" id="post-author" required placeholder="著者名">
+                            </div>
+                            <div class="form-group">
+                                <label for="post-category">カテゴリー:</label>
+                                <select id="post-category" required>
+                                    <option value="announcement">📢 発表</option>
+                                    <option value="important">⚠️ 重要</option>
+                                    <option value="update">🔄 アップデート</option>
+                                    <option value="maintenance">🔧 メンテナンス</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Options -->
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="post-featured">
+                                <span class="checkmark"></span>
+                                注目記事として表示
+                            </label>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="form-actions">
+                            <button type="submit" class="admin-btn primary">💾 保存</button>
+                            <button type="button" id="save-draft" class="admin-btn">📝 下書き保存</button>
+                            <button type="button" id="cancel-btn" class="admin-btn secondary">❌ キャンセル</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NoHackAnarchy - Ultimate Vanilla Anarchy Experience</p>
+            <p>Minecraft is a trademark of Mojang Studios</p>
+            <!-- Admin Access -->
+            <div class="admin-access">
+                <button id="admin-toggle" class="admin-toggle">管理</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
