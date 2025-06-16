@@ -19,9 +19,13 @@ async function initializeApp() {
         initializeAnimations();
         initializeScrollEffects();
         
-        // Initial render after data is loaded
-        if (blogData && blogData.posts) {
-            filterPosts();
+        // Ensure data is loaded before filtering and rendering
+        if (blogData && blogData.posts && Array.isArray(blogData.posts)) {
+            currentPosts = [...blogData.posts];
+            console.log('currentPosts initialized:', currentPosts.length);
+            renderBlogPosts();
+        } else {
+            console.error('Blog data not properly loaded');
         }
     } catch (error) {
         console.error('Error initializing app:', error);
