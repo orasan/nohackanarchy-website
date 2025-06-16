@@ -12,12 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize the application
 async function initializeApp() {
-    await loadBlogData();
-    initializeNavigation();
-    initializeBlogFunctionality();
-    initializeAnimations();
-    initializeScrollEffects();
-    renderBlogPosts();
+    try {
+        await loadBlogData();
+        initializeNavigation();
+        initializeBlogFunctionality();
+        initializeAnimations();
+        initializeScrollEffects();
+        
+        // Initial render after data is loaded
+        if (blogData && blogData.posts) {
+            filterPosts();
+        }
+    } catch (error) {
+        console.error('Error initializing app:', error);
+    }
 }
 
 // Load blog data from JSON (GitHub Pages compatible)
@@ -26,13 +34,23 @@ async function loadBlogData() {
         // GitHub Pages では相対パスでJSONを読み込み
         const response = await fetch('./blog-data.json');
         if (!response.ok) {
-            throw new Error('Failed to load blog data');
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
-        blogData = await response.json();
+        
+        const data = await response.json();
+        
+        // Validate data structure
+        if (!data.posts || !Array.isArray(data.posts) || !data.categories) {
+            throw new Error('Invalid blog data structure');
+        }
+        
+        blogData = data;
         currentPosts = [...blogData.posts];
-        console.log('Blog data loaded successfully from GitHub Pages');
+        console.log('Blog data loaded successfully:', blogData.posts.length, 'posts');
+        
     } catch (error) {
         console.error('Error loading blog data:', error);
+        
         // GitHub Pages フォールバック用のサンプルデータ
         blogData = {
             posts: [
@@ -63,6 +81,7 @@ async function loadBlogData() {
             }
         };
         currentPosts = [...blogData.posts];
+        console.log('Using fallback data:', blogData.posts.length, 'posts');
     }
 }
 
