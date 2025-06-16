@@ -4,7 +4,7 @@
       "id": 1,
       "date": "2025-06-16",
       "title": "サイトの開設",
-      "content": "サイトが公開されました。これからもNohackanarchyをよろしくお願いいたします。",
+      "content": "NoHackAnarchyサイトが公開されました！これからもよろしくお願いいたします。\n\n**新機能:**\n• 高速な配信\n• 無料ホスティング\n• 自動HTTPS\n• カスタムドメイン対応\n\nぜひご活用ください！",
       "author": "orasan",
       "category": "announcement",
       "featured": true
@@ -12,53 +12,44 @@
     {
       "id": 2,
       "date": "2025-06-16",
-      "title": "サーバールール更新のお知らせ",
-      "content": "サーバールールが一部更新されました。以下の行為は引き続き禁止されています：\n\n• ハッキング\n• チートとハッククライアントの使用\n• サーバークラッシャー\n• X-rayの使用\n\n**要約: チート以外なんでもあり！**\n荒らし行為は通常通り許可されています。",
+      "title": "GitHub Pagesでの運用開始",
+      "content": "NoHackAnarchyサイトはGitHub Pagesで運用されています。\n\n**特徴:**\n• 完全無料ホスティング\n• 高速なCDN配信\n• 自動HTTPS対応\n• 99.9%の稼働率\n\nブログ記事の更新は、GitHubリポジトリのblog-data.jsonファイルを編集することで行えます。",
       "author": "admin",
-      "category": "important",
+      "category": "update",
       "featured": false
     },
     {
       "id": 3,
       "date": "2025-06-15",
-      "title": "クロスプラットフォーム対応完了",
-      "content": "Nintendo Switch、Xbox、PS4/5からの参加が可能になりました！\n\n**minianarchy1** をフレンド追加してから参加してください。\n\n💡 **接続のヒント:**\n参加ボタンが表示されない場合は、ゲームを再起動するか30秒〜60秒お待ちください。",
-      "author": "admin",
-      "category": "update",
-      "featured": true
+      "title": "サーバールール更新のお知らせ",
+      "content": "サーバールールが一部更新されました。以下の行為は引き続き禁止されています：\n\n**禁止事項（BAN対象）:**\n• ハッキング\n• チートとハッククライアントの使用\n• サーバークラッシャー\n• X-rayの使用\n\n**要約: チート以外なんでもあり！**\n荒らし行為は通常通り許可されています。",
+      "author": "orasan",
+      "category": "important",
+      "featured": false
     },
     {
       "id": 4,
       "date": "2025-06-14",
-      "title": "サーバーパフォーマンス最適化",
-      "content": "サーバーのパフォーマンスを大幅に改善しました：\n\n• 🚀 ラグの軽減\n• ⚡ 読み込み速度の向上\n• 🔧 安定性の改善\n\nより快適なゲーム体験をお楽しみください。",
+      "title": "クロスプラットフォーム対応完了",
+      "content": "Nintendo Switch、Xbox、PS4/5からの参加が可能になりました！\n\n**接続方法:**\n1. minianarchy1 をフレンド追加\n2. フレンドリストから参加\n\n**接続のヒント:**\n参加ボタンが表示されない場合は、ゲームを再起動するか30秒〜60秒お待ちください。",
       "author": "admin",
-      "category": "maintenance",
+      "category": "update",
       "featured": false
     },
     {
       "id": 5,
       "date": "2025-06-13",
-      "title": "NoHackAnarchy サーバー開設",
-      "content": "NoHackAnarchyサーバーが正式にオープンしました！\n\n究極のバニラアナーキー体験をお楽しみください。チート以外のあらゆる行為が許可された自由な世界で、あなたの冒険が始まります。\n\n多くのプレイヤーの参加をお待ちしています！",
-      "author": "admin",
-      "category": "announcement",
-      "featured": true
-    },
-    {
-      "id": 6,
-      "date": "2025-06-12",
-      "title": "サーバー設定最終調整",
-      "content": "正式開設に向けてサーバー設定の最終調整を行いました。\n\n• 🛡️ セキュリティ強化\n• ⚙️ ワールド生成設定調整\n• 📊 ログ記録システム導入",
+      "title": "サーバーパフォーマンス最適化",
+      "content": "サーバーのパフォーマンスを大幅に改善しました：\n\n**改善内容:**\n• 🚀 ラグの軽減\n• ⚡ 読み込み速度の向上\n• 🔧 安定性の改善\n• 💾 メモリ使用量最適化\n\nより快適なゲーム体験をお楽しみください。",
       "author": "admin",
       "category": "maintenance",
       "featured": false
     },
     {
-      "id": 7,
+      "id": 6,
       "date": "2025-06-10",
-      "title": "サーバー開設予告",
-      "content": "NoHackAnarchyサーバーの開設準備が完了しました。\n\n近日中に正式オープン予定です。Discord コミュニティも準備完了しており、プレイヤーの皆様をお待ちしております。",
+      "title": "NoHackAnarchy サーバー開設",
+      "content": "NoHackAnarchyサーバーが正式にオープンしました！\n\n**サーバー特徴:**\n• チート以外なんでもあり\n• 24/7稼働\n• クロスプラットフォーム対応\n• 無制限の自由度\n\n究極のバニラアナーキー体験をお楽しみください。多くのプレイヤーの参加をお待ちしています！",
       "author": "admin",
       "category": "announcement",
       "featured": false
