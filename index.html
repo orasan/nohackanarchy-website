@@ -11,9 +11,13 @@
             box-sizing: border-box;
         }
 
+        html {
+            font-size: 16px;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-            background: #000;
+            font-family: -apple-system, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", Meiryo, sans-serif;
+            background: #000 url('background.jpg') center/cover no-repeat fixed;
             color: #fff;
             min-height: 100vh;
             display: flex;
@@ -21,23 +25,91 @@
             justify-content: center;
             padding: 20px;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            position: relative;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* 背景ぼかしオーバーレイ */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: -1;
+        }
+
+        /* 言語選択プルダウン */
+        .lang-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .lang-select {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            font-family: inherit;
+        }
+
+        .lang-select:hover {
+            background: rgba(30, 30, 30, 0.8);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .lang-select:focus {
+            border-color: #ff4444;
+        }
+
+        .lang-select option {
+            background: #1a1a1a;
+            color: #fff;
         }
 
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 520px;
+            min-height: 520px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px) saturate(150%);
+            -webkit-backdrop-filter: blur(20px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
         }
 
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            height: 3rem;
+            line-height: 1;
+            letter-spacing: 0.05em;
         }
 
         .tagline {
             color: #ff4444;
-            font-size: 1.1rem;
+            font-size: 1.125rem;
             margin-bottom: 1.5rem;
+            height: 1.5rem;
+            letter-spacing: 0.02em;
         }
 
         .info-grid {
@@ -47,8 +119,8 @@
         }
 
         .info-row {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 0.75rem 1rem;
             border-radius: 6px;
             display: flex;
@@ -56,22 +128,73 @@
             align-items: center;
             cursor: pointer;
             transition: all 0.2s;
+            height: 48px;
         }
 
         .info-row:hover {
-            background: #111;
-            border-color: #333;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
         }
 
         .label {
-            font-size: 0.75rem;
+            font-size: 0.8125rem;
             color: #666;
             text-transform: uppercase;
+            width: 60px;
+            letter-spacing: 0.05em;
         }
 
         .value {
-            font-family: monospace;
+            font-family: 'SF Mono', 'Monaco', 'Consolas', 'Courier New', monospace;
             font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .platforms {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            color: #888;
+            align-items: center;
+            min-height: 32px;
+        }
+
+        .platforms span {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .platforms-label {
+            color: #fff !important;
+            background: transparent !important;
+            padding: 0.3rem 0.3rem 0.3rem 0 !important;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .console-note {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.65;
+            min-height: 40px;
+            letter-spacing: 0.02em;
+        }
+
+        .console-note code {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', 'Monaco', 'Consolas', 'Courier New', monospace;
         }
 
         .rule {
@@ -80,48 +203,23 @@
             border-radius: 6px;
             padding: 1rem;
             margin-bottom: 1.5rem;
-            font-size: 0.9rem;
+            font-size: 0.9375rem;
+            min-height: 70px;
+            line-height: 1.65;
+            letter-spacing: 0.02em;
         }
 
         .rule strong {
             color: #ff4444;
         }
 
-        .platforms {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-bottom: 0.75rem;
-            font-size: 0.8rem;
-            color: #888;
-            align-items: center;
-        }
-
-        .platforms span {
-            background: #0a0a0a;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-        }
-
-        .console-note {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        .console-note code {
-            color: #fff;
-            background: #0a0a0a;
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-        }
-
         .discord {
             color: #5865F2;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.9375rem;
             transition: opacity 0.2s;
+            display: inline-block;
+            letter-spacing: 0.02em;
         }
 
         .discord:hover {
@@ -137,67 +235,189 @@
             color: #000;
             padding: 0.5rem 1rem;
             border-radius: 4px;
-            font-size: 0.8rem;
+            font-size: 0.875rem;
             font-weight: 600;
             opacity: 0;
             transition: opacity 0.2s;
+            pointer-events: none;
+            letter-spacing: 0.02em;
         }
 
         .copy-hint.show {
             opacity: 1;
         }
 
+        @media (max-width: 560px) {
+            .platforms {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            .tagline {
+                font-size: 1rem;
+            }
+            .rule, .console-note {
+                font-size: 0.875rem;
+            }
+        }
+
         @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
+                line-height: 1.1;
             }
             .info-row {
                 padding: 0.6rem 0.8rem;
+            }
+            .container {
+                padding: 30px 20px;
+                min-height: 480px;
+            }
+            .lang-selector {
+                top: 10px;
+                right: 10px;
+            }
+            .platforms {
+                font-size: 0.8125rem;
+            }
+            .tagline {
+                font-size: 1rem;
+            }
+            .rule, .console-note {
+                font-size: 0.875rem;
+            }
+            .platforms span {
+                padding: 0.25rem 0.45rem;
+                font-size: 0.8125rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- 言語選択 -->
+    <div class="lang-selector">
+        <select class="lang-select" onchange="setLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+        </select>
+    </div>
+
     <div class="container">
-        <h1>Nohackanarchy</h1>
-        <p class="tagline">チートなしアナーキーサーバー</p>
+        <h1 data-i18n="title">Nohackanarchy</h1>
+        <p class="tagline" data-i18n="tagline">チートなしアナーキーサーバー</p>
         
         <div class="info-grid">
             <div class="info-row" onclick="copy('nohackanarchy.mcsv.win')">
-                <span class="label">IP</span>
+                <span class="label" data-i18n="ip">IP</span>
                 <span class="value">nohackanarchy.mcsv.win</span>
             </div>
             <div class="info-row" onclick="copy('3021')">
-                <span class="label">Port</span>
+                <span class="label" data-i18n="port">Port</span>
                 <span class="value">3021</span>
             </div>
         </div>
         
         <div class="platforms">
-            <span style="color: #fff;">対応デバイス:</span>
+            <span class="platforms-label" data-i18n="supportedDevices">対応デバイス:</span>
             <span>Java 1.21.5</span>
-            <span>スマホ/PC</span>
+            <span data-i18n="mobilePc">スマホ/PC</span>
             <span>Switch</span>
             <span>Xbox</span>
             <span>PS4/5</span>
         </div>
         
         <p class="console-note">
-            コンソール版: <code>minianarchy1</code> をフレンド追加<br>
-            <span style="color: #555;">※接続できない場合は30秒待つか再起動</span>
+            <span data-i18n="consoleVersion">コンソール版:</span> <code>minianarchy1</code> <span data-i18n="addFriend">をフレンド追加</span><br>
+            <span style="color: #555;" data-i18n="connectionNote">※接続できない場合は30秒待つか再起動</span>
         </p>
         
         <div class="rule">
-            <strong>禁止:</strong> チート・ハック・X-ray・サーバークラッシャー<br>
-            <span style="color: #aaa;">→ チート以外なんでもあり（荒らしOK）</span>
+            <strong data-i18n="prohibited">禁止:</strong> <span data-i18n="prohibitedItems">チート・ハック・X-ray・サーバークラッシャー</span><br>
+            <span style="color: #aaa;" data-i18n="ruleNote">→ チート以外なんでもあり（荒らしOK）</span>
         </div>
         
         <a href="https://discord.gg/CzfGwv2wPM" class="discord" target="_blank">Discord →</a>
     </div>
     
-    <div class="copy-hint" id="copyHint">コピーしました</div>
+    <div class="copy-hint" id="copyHint" data-i18n="copied">コピーしました</div>
 
     <script>
+        // 翻訳データ
+        const translations = {
+            ja: {
+                title: "Nohackanarchy",
+                tagline: "チートなしアナーキーサーバー",
+                ip: "IP",
+                port: "Port",
+                supportedDevices: "対応デバイス:",
+                mobilePc: "スマホ/PC",
+                consoleVersion: "コンソール版:",
+                addFriend: "をフレンド追加",
+                connectionNote: "※接続できない場合は30秒待つか再起動",
+                prohibited: "禁止:",
+                prohibitedItems: "チート・ハック・X-ray・サーバークラッシャー",
+                ruleNote: "→ チート以外なんでもあり（荒らしOK）",
+                copied: "コピーしました"
+            },
+            en: {
+                title: "Nohackanarchy",
+                tagline: "No-Cheat Anarchy Server",
+                ip: "IP",
+                port: "Port",
+                supportedDevices: "Supported:",
+                mobilePc: "Mobile/PC",
+                consoleVersion: "Console:",
+                addFriend: "Add as friend",
+                connectionNote: "※If unable to connect, wait 30s or restart",
+                prohibited: "Banned:",
+                prohibitedItems: "Cheats, Hacks, X-ray, Server Crashers",
+                ruleNote: "→ Anything goes except cheats (griefing OK)",
+                copied: "Copied!"
+            },
+            zh: {
+                title: "Nohackanarchy",
+                tagline: "无作弊无政府服务器",
+                ip: "IP地址",
+                port: "端口",
+                supportedDevices: "支持设备：",
+                mobilePc: "手机/电脑",
+                consoleVersion: "主机版：",
+                addFriend: "添加好友",
+                connectionNote: "※无法连接请等待30秒或重启",
+                prohibited: "禁止：",
+                prohibitedItems: "作弊、黑客、透视、服务器崩溃器",
+                ruleNote: "→ 除作弊外一切都可以（允许破坏）",
+                copied: "已复制"
+            }
+        };
+
+        // 現在の言語
+        let currentLang = 'ja';
+
+        // ブラウザの言語を検出
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('ja')) return 'ja';
+            if (browserLang.startsWith('zh')) return 'zh';
+            if (browserLang.startsWith('en')) return 'en';
+            return 'ja'; // デフォルト
+        }
+
+        // 言語を設定
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            
+            // 翻訳を適用
+            document.querySelectorAll('[data-i18n]').forEach(elem => {
+                const key = elem.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    elem.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // コピー機能
         function copy(text) {
             navigator.clipboard.writeText(text).then(() => {
                 const hint = document.getElementById('copyHint');
@@ -205,6 +425,20 @@
                 setTimeout(() => hint.classList.remove('show'), 1500);
             });
         }
+
+        // 初期化
+        window.addEventListener('DOMContentLoaded', () => {
+            const detectedLang = detectLanguage();
+            const select = document.querySelector('.lang-select');
+            
+            // 検出された言語を選択
+            select.value = detectedLang;
+            
+            // 言語を適用
+            if (detectedLang !== 'ja') {
+                setLanguage(detectedLang);
+            }
+        });
     </script>
 </body>
 </html>
