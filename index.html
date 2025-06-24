@@ -23,7 +23,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 20px 20px 60px 20px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
@@ -228,7 +228,7 @@
 
         .copy-hint {
             position: fixed;
-            bottom: 20px;
+            bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
             background: #44ff44;
@@ -241,10 +241,33 @@
             transition: opacity 0.2s;
             pointer-events: none;
             letter-spacing: 0.02em;
+            z-index: 1000;
         }
 
         .copy-hint.show {
             opacity: 1;
+        }
+
+        .copyright {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.25);
+            text-align: center;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+            font-weight: 300;
+            padding: 4px 12px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: color 0.3s ease;
+            z-index: 10;
+        }
+
+        .copyright:hover {
+            color: rgba(255, 255, 255, 0.4);
         }
 
         @media (max-width: 560px) {
@@ -257,6 +280,10 @@
             }
             .rule, .console-note {
                 font-size: 0.875rem;
+            }
+            .copyright {
+                font-size: 0.7rem;
+                bottom: 10px;
             }
         }
 
@@ -271,6 +298,9 @@
             .container {
                 padding: 30px 20px;
                 min-height: 480px;
+            }
+            body {
+                padding: 20px 20px 50px 20px;
             }
             .lang-selector {
                 top: 10px;
@@ -339,6 +369,10 @@
         <a href="https://discord.gg/CzfGwv2wPM" class="discord" target="_blank">Discord →</a>
     </div>
     
+    <div class="copyright" data-i18n="copyright">
+        © 2025 Nohackanarchy. All rights reserved.
+    </div>
+    
     <div class="copy-hint" id="copyHint" data-i18n="copied">コピーしました</div>
 
     <script>
@@ -357,7 +391,8 @@
                 prohibited: "禁止:",
                 prohibitedItems: "チート・ハック・X-ray・サーバークラッシャー",
                 ruleNote: "→ チート以外なんでもあり（荒らしOK）",
-                copied: "コピーしました"
+                copied: "コピーしました",
+                copyright: "© 2025 Nohackanarchy. All rights reserved."
             },
             en: {
                 title: "Nohackanarchy",
@@ -387,7 +422,8 @@
                 prohibited: "禁止：",
                 prohibitedItems: "作弊、黑客、透视、服务器崩溃器",
                 ruleNote: "→ 除作弊外一切都可以（允许破坏）",
-                copied: "已复制"
+                copied: "已复制",
+                copyright: "© 2025 Nohackanarchy. 版权所有。"
             }
         };
 
